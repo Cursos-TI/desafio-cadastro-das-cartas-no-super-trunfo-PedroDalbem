@@ -10,7 +10,7 @@ int main() {
    // Nome da cidade (espaço para até 49 caracteres + '\0')
    char cidade1 [50];
     // Número de habitantes
-   int pipulação;
+   int populacao;
    // Área em km²
    float area1;
    // PIB da cidade
@@ -32,9 +32,10 @@ printf("Para iniciarmos vamos fazer o cadastro de suas cartas\n");
 
 printf("carta 1");
 printf("Digite uma letra de A a h para o primeiro estado");
-scanf("%c", estado1);
+scanf(" %c", &estado1);
 
 printf("Digite um codigo de 01 a 04 para a carta");
-scanf("%s", codigo1);
+scanf(" %s", codigo1);
+
 
 }
