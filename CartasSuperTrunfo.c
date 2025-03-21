@@ -17,7 +17,11 @@ int main() {
    float pib1;
    // Número de pontos turísticos
    int pontos1;
-
+   // calculo da população / area
+   float densidade1;
+   // calculo do pib / população
+   float pibpercapita1;
+   
    // Carta 2
 char estado2;
 char codigo2[4];      
@@ -26,6 +30,8 @@ int populacao2;
 float area2;
 float pib2;
 int pontos2;
+float densidade2;
+float pibpercapita2;
 
 printf("Vamos começar seu jogo de super trunfo?\n");
 printf("Para iniciarmos vamos fazer o cadastro de suas cartas\n");
@@ -54,16 +60,23 @@ scanf("%f", &pib1);
 printf("Quantos potos turisticos tem a cidade: %s\n", cidade1);
 scanf("%d", &pontos1);
 
+densidade1 = populacao1 / area1;
+pibpercapita1 = pib1 / (float)populacao1;
+
+pibpercapita1 = pibpercapita1 * 1000000;
+
 printf("CARTA 1:\n");
 printf("Codigo da carta: %c%s\n", estado1, codigo1);
 printf("Nome da cidade: %s\n", cidade1);
 printf("Sua população: %d\n", populacao1);
 printf("Sua area: %.2f km²\n", area1);
-printf("Seu PIB: %.2f Bilhões\n", pib1);
-printf("Quantidade de postos turisticos: %d\n\n", pontos1);
+printf("Seu PIB: %.2f Milhões\n", pib1);
+printf("Quantidade de postos turisticos: %d\n", pontos1);
+printf("A densidade populacional é: %.2f hab/km²\n", densidade1);
+printf("O pib per capita é: %.3f\n\n", pibpercapita1);
 
 
-printf("PARABENS VOCE ADICIONOU SUA PRIMEIRA CARTA\n\n");
+printf("PARABENS VOCE ADICIONOU SUA PRIMEIRA CARTA!\n\n");
 
 
 printf("carta 2\n");
@@ -90,17 +103,25 @@ scanf("%f", &pib2);
 printf("Quantos potos turisticos tem a cidade: %s\n", cidade2);
 scanf("%d", &pontos2);
 
+densidade2 = populacao2 / area2;
+pibpercapita2 = pib2 / (float)populacao2;
+
+pibpercapita2 = pibpercapita2 * 1000000;
+
 printf("CARTA 2:\n");
 printf("Codigo da carta: %c%s\n", estado2, codigo2);
 printf("Nome da cidade: %s\n", cidade2);
 printf("Sua população: %d\n", populacao2);
 printf("Sua area: %.2f km²\n", area2);
-printf("Seu PIB: %.2f Bilhões\n", pib2);
-printf("Quantidade de postos turisticos: %d\n\n", pontos2);
+printf("Seu PIB: %.2f Milhões\n", pib2);
+printf("Quantidade de postos turisticos: %d\n", pontos2);
+printf("A densidade populacional é: %.2f\n", densidade2);
+printf("O pib per capita é: %.3f\n\n", pibpercapita2);
 
 
-printf("PARABENS VOCE ADICIONOU SUA SEGUNDA CARTA");
+printf("PARABENS VOCE ADICIONOU SUA SEGUNDA CARTA!\n\n");
 
 
 return 0;
+
 }
